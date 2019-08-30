@@ -1,7 +1,7 @@
 # Stage 1 - the build process
 FROM node:11-alpine as build-deps
 WORKDIR /usr/src/app
-COPY package.json ./
+COPY package*.json ./
 RUN yarn
 COPY . ./
 RUN yarn build
